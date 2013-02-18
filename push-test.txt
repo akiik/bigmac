@@ -7,4 +7,6 @@ touch,touch,touch
 naughty,naughty
 hot,hot,hot
 push the button
-push push jankme
+push push 
+
+george bush
