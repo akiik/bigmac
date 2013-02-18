@@ -7,3 +7,4 @@ touch,touch,touch
 naughty,naughty
 hot,hot,hot
 push the button
+push push 
