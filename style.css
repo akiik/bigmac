@@ -3,8 +3,11 @@ background-color:#3355EE;
 }
 .part {
 	float:left;
-	width:200px;
-	height:200px;
+	width:20%;
+	height:20%;
 	border: 1px solid red;
 	margin:20px;
+}
+.content {
+	margin:0em auto;
 }
