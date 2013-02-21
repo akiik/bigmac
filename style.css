@@ -91,17 +91,20 @@ box-shadow: 5px 5px 5px #000;
 
 #part1 .inner {
 
-	background-image:url('add-candidate.png');
+	background-image:url('images/add-candidate-ss.png');
 	
 }
 #part2 .inner {
-
-	background-image:url('add-candidate.png');
+	background-image:url('images/vote3.png');
+	background-repeat:no-repeat;
+	background-position:center;
 	
 }
 #part3 .inner {
 
-	background-image:url('add-candidate.png');
+	background-image:url('images/add-candidate-ss.png');
+	background-repeat:no-repeat;
+	background-position:center;
 	
 }
 .inner {
