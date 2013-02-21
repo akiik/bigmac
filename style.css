@@ -98,6 +98,7 @@ box-shadow: 5px 5px 5px #000;
 	background-image:url('images/vote4.png');
 	background-repeat:no-repeat;
 	background-position:center;
+	background-position-y: 20px; 
 	
 }
 #part3 .inner {
