@@ -1,16 +1,36 @@
-Ôªø
+
 <!DOCTYPE html>
 <html>
 
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css" />
+<script>
+
+$(function() {
+    $('#dialog').dialog({
+        autoOpen: false
+    });
+    $('#Login').click(function() {
+        $('#dialog').dialog('open');
+    });
+});
+</script>
+
 </head>
   <body>
 	<div class="container">
 		<div class="header"> 
 			<p>E-valimised 2013</p>
-			<a id="login" href="">Logi sisse</a>
 			
+			
+			<div id="dialog" title="Logi sisse FB kaudu">
+    			<p>Lehmake, lehmake, mis siis muud, kui lehmake!</p>
+			</div>
+			<a id="Login" href="#">Logi sisse</a>
 		</div>
 		<div class="content">
 			<div class="part" id="part1">
@@ -22,7 +42,7 @@
 			<div class="part" id="part2">
 				<div class="inner">
 					<div class="link">
-					 <a href="" >H√§√§leta</a>
+					 <a href="" >H‰‰leta</a>
 					 </div>
 				</div>
 			</div>
