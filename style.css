@@ -91,11 +91,11 @@ box-shadow: 5px 5px 5px #000;
 
 #part1 .inner {
 
-	background-image:url('images/add-candidate-ss.png');
+	background-image:url('images/add-candidate.png');
 	
 }
 #part2 .inner {
-	background-image:url('images/vote4.png');
+	background-image:url('images/vote.png');
 	background-repeat:no-repeat;
 	background-position:center;
 	background-position-y: 20px; 
@@ -103,7 +103,7 @@ box-shadow: 5px 5px 5px #000;
 }
 #part3 .inner {
 
-	background-image:url('images/add-candidate-ss.png');
+	background-image:url('images/stats.png');
 	background-repeat:no-repeat;
 	background-position:center;
 	
