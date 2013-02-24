@@ -195,6 +195,24 @@ float:left;
 float:left;
 padding-left:30px;
 }
+#candidate-info{
+	border: 2px solid #114578;
+	padding-left: 10px;
+	background: white;
+	margin-left: 15px;
+	float: left;
+	width: 210px;
+}
+
+#candidate-info-label{
+	font-weight: bold;
+}
+#candidate-info-text{
+	font-size: 12px;
+}
+#candidate-header{
+	text-align:center;
+}
 #feedback { font-size: 12px; }
 #selectable .ui-selecting { background: #FECA40; }
 #selectable .ui-selected { background: #F39814; color: white; }
