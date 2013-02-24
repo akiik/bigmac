@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+<script src="javascript.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css" />
+
+
+</head>
+  <body>
+	<div class="container">
+		<div class="header"> 
+			<p>E-valimised 2013</p>
+			
+			
+			<div id="dialog" title="Logi sisse FB kaudu">
+    			<p>Lehmake, lehmake, mis siis muud, kui lehmake!</p>
+			</div>
+			<a id="login" href="#">Logi sisse</a>
+		</div>
+		<div class="content">
+			<div id="box">
+				<div id="byname">
+					<div class="user-status">
+						<h3>Sisselogitud kui Einar Kull
+						<a href="index.html" class="avalehele">Avalehele</a>
+						</h3>
+					</div>
+				</div>
+				<div id="row1">
+					<h3>Isikuandmed:</h3>
+					<p>Nimi: Eesnimi Perekonnanimi</p>
+					<p>Sünniaeg: PP-KK-AA</p>
+					<p>Isikukood: 1234567890</p>
+				</div>
+				
+				<div id="row2">
+					<h3>Kandideerimise andmed:</h3>
+					
+					<form action="">
+					<select name="erakonnad">
+					<option value="null">Vali partei:</option>
+					<option value="Keskerakond">Keskerakond</option>
+					<option value="IRL">Isamaa ja Res Publica liit</option>
+					<option value="Reformierakond">Reformierakond</option>
+					<option value="SDE">Sotsiaaldemokraadid</option>
+					</select>
+					</form>
+					
+					<form action="">
+					<select name="piirkond">
+					<option value="null">Vali kandideerimispiirkond:</option>
+					<option value="Harjumaa">Harjumaa</option>
+					<option value="Hiiumaa">Hiiumaa</option>
+					<option value="Ida-Virumaa">Ida-Virumaa</option>
+					<option value="Jõgevamaa">Jõgevamaa</option>
+					<option value="Järvamaa">Järvamaa</option>
+					<option value="Läänemaa">Läänemaa</option>
+					<option value="Lääne-Virumaa">Lääne-Virumaa</option>
+					<option value="Põlvamaa">Põlvamaa</option>
+					<option value="Pärnumaa">Pärnumaa</option>
+					<option value="Raplamaa">Raplamaa</option>
+					<option value="Saaremaa">Saaremaa</option>
+					<option value="Tallinna linn">Tallinna linn</option>
+					<option value="Tartu linn">Tartu linn</option>
+					<option value="Tartumaa">Tartumaa</option>
+					<option value="Valgamaa">Valgamaa</option>
+					<option value="Viljandimaa">Viljandimaa</option>
+					<option value="Võrumaa">Võruumaa</option>
+					</select>
+					</form>
+					
+					<form action="">
+					<select name="haridus">
+					<option value="null">Vali haridustase:</option>
+					<option value="algharidus">algharidus</option>
+					<option value="põhiharidus">põhiharidus</option>
+					<option value="keskharidus">keskharidus</option>
+					<option value="kõrgharidus">kõrgharidus</option>
+					</select>
+					</form>
+					<input type="text" style="color:#ccc;" value="Sisesta tegevusala" onfocus="this.value = this.value=='Sisesta tegevusala' ? '' : this.value; this.style.color='#000';" onfocusout="this.value = this.value == '' ? this.value = 'Sisesta tegevusala' : this.value; this.value=='Sisesta tegevusala' ? this.style.color='#ccc' : this.style.color='#000'"/>
+				</div>
+				
+				<div id="row2">
+					<h3>Sõnum valijale:</h3>
+					<p>Kirjuta, miks peaks inimene just sind valima:</p>
+					<textarea rows="4" cols="30"></textarea>
+				</div>
+				
+				<a href="#" class="run">Kandideerin!</a>
+				
+			</div> <!-- box ends -->
+		</div> <!-- content ends -->
+		<div class="footer"> </div>
+
+
+	</div><!-- container ends -->
+  </body>
+</html> 
