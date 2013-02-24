@@ -35,3 +35,8 @@ result.append( " #" + ( index + 1 ) );
 	source: availableTags
 	});
 });
+
+//statistika tabid
+ $(function() {
+	$( "#tabs" ).tabs();
+});
