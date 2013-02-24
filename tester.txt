@@ -1,5 +1,0 @@
-sdcommit tester sdsaADasA
-
-kkkkk
-
-CI WORKS FINALLY!
