@@ -44,6 +44,7 @@ height:100%;
 #login {
 	padding:0px;
 	margin-right:0px;
+	color: #FFF;
 }
 .link {
 	display:table-cell;
@@ -131,7 +132,10 @@ height:100%;
 
 
 
-
+.part {
+	border-radius:4px;
+	-moz-border-radius:4px; /* Old Firefox */
+}
 
 #part1{
 	background: #1aba1a; /* Old browsers */
