@@ -1,6 +1,3 @@
-Options -Indexes 
-Order deny,allow
-DirectoryIndex index.html
 
 # BEGIN GZIP
 # mod_gzip compression (legacy, Apache 1.3)
