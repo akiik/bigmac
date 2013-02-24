@@ -2,8 +2,7 @@ html,body {
 background-color:#1260cc;
 font-family: Arial, sans-serif;
 height:100%;
-border: 1px solid #000;
-margin:0px;
+
 
 }
 
@@ -60,7 +59,6 @@ margin:0px;
 		position:relative;
 		max-width:1000px;
 		margin:0em auto;
-		border: 1px solid green;
 		height:100%; /* IE6: treaded as min-height*/
 		min-height:100%; /* real browsers */
 	
@@ -82,7 +80,6 @@ margin:0px;
 	}
 	.content {
 		position:relative;
-		border:1px solid red;
 		height:80%; /* IE6: treaded as min-height*/
 		min-height:80%; /* real browsers */
 	}
