@@ -1,4 +1,4 @@
-
+//login popup
 $(function() {
     $('#dialog').dialog({
         autoOpen: false
@@ -7,7 +7,7 @@ $(function() {
         $('#dialog').dialog('open');
     });
 });
-
+//vali erakond
 $(function() {
 $( "#selectable" ).selectable({
 stop: function() {
@@ -20,3 +20,18 @@ result.append( " #" + ( index + 1 ) );
 });
 });
 
+//nime autocomplete
+
+ $(function() {
+	var availableTags = [
+	"Jaan Põld",
+	"Jaanus Murakas",
+	"Janar Kokk",
+	"Priit Punane",
+	"Peeter Karvane"
+
+	];
+	$( "#tags" ).autocomplete({
+	source: availableTags
+	});
+});
