@@ -7,16 +7,13 @@ height:100%;
 }
 
 
-/*
-	The "Default" layout aka mobile friendly layout
-*/
-
 .header {
-	padding:0px;
+	height:20px;
+	margin:2%;
 }
 .header p {	
+	float:left;
 	font-size:20px;
-
 	padding:0px;
 	margin:0px;
 	margin-left:0px;
@@ -24,50 +21,73 @@ height:100%;
 }
 .container {
 	position:relative;
+	max-width:1000px;
+	min-width:480px;
 	margin:0em auto;
+	height:100%; /* IE6: treaded as min-height*/
+	min-height:100%; /* real browsers */
 
 }
 .part {
-	display:table;
 	position:relative;
-	clear:both;
-	width:100%;
-	max-width:400px;
+	display:block;
+	width:28.5%;
+	max-width:100%;
+	min-width:120px;
 	float:left;
-	height:150px;
+	height:80%;
 	border: 1px solid #000;
-	margin:10px 0px;
+	margin:2%;
+	max-height:250px; /* real browsers */
+	min-height:120px;
 
 	
 
 }
+
 #login {
+	float:right;
 	padding:0px;
-	margin-right:0px;
+	margin-right:20px;
 	color: #FFF;
 }
-.link {
-	display:table-cell;
-		vertical-align:middle;
-	text-align:left;
-	padding:10px 0px 10px 10px;
-
-
+#mobile_home {
+	display:none;
+}
+.link {	
+	position:absolute;
+	bottom:10px;
+	width:100%;
+	text-align:center;
+	padding:0px;
+	z-index:5;
 
 }
-.inner {
-	display:table-cell;
-	background-position:right center;
+
+.content {
+	position:relative;
+	height:80%; /* IE6: treaded as min-height*/
+	min-height:80%; /* real browsers */
+}
+
+
+.inner {position:relative;
+	background-position:center;
+	display:block;
 	width:100%;
 	height:100%;
-	position:relative;
+	max-height:250px;
+	min-height:120px;
+	
 
 }
 
 #searchby div {
-	float:left;
-	margin:1	% 5%;
-	clear:both;
+	float:left;	
+	margin-right: 0.8%;
+	margin-bottom:3%;
+	clear:none;
+
 
 }
 
@@ -82,21 +102,20 @@ height:100%;
 #info{
 	position:relative;
 	float:left;
-	padding:4% 1%;
-	margin-bottom:20px;
+	width:350px;
+	padding:4%;
+	padding-top:1%;
 }
 
 #info p {
 	clear: both;
-	width:200px;
+	width:100%;
 }
 
 
-
-
 .submitvote { /* vote nupp */
-	position:absolute;
-	bottom:-20px;
+	margin-top:10%;
+	float:right;
 	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
 	box-shadow:inset 0px 1px 0px 0px #fce2c1;
@@ -123,14 +142,13 @@ height:100%;
 	background-color:#fb9e25;
 }.submitvote:active {
 	position:relative;
-	top:21px;
+	top:1px;
 }
 
 .avalehele {
+		float:right;
 	padding:2px;
-	display:block;
-	position:absolute;
-	top:10px;
+	position:relative;
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -157,7 +175,7 @@ height:100%;
 	background-color:#dfdfdf;
 }.avalehele:active {
 	position:relative;
-	top:11px;
+	top:1px;
 }
 
 
@@ -169,8 +187,7 @@ height:100%;
 
 .search { /* Otsi nupp */
 
-	margin-left:0px;
-	margin-top:10px;
+	margin-left:10px;
 	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
 	box-shadow:inset 0px 1px 0px 0px #fce2c1;
@@ -200,109 +217,6 @@ height:100%;
 	top:1px;
 }
 
-
-
-/*
-	The "Desktop" layout
-*/
-@media all and (min-width:480px){
-	.header {
-		height:20px;
-		margin:2%;
-	}
-	.header p {	
-		font-size:20px;
-		float:left;
-		padding:0px;
-		margin:0px;
-	}
-	.container {
-		position:relative;
-		max-width:1000px;
-		margin:0em auto;
-		height:100%; /* IE6: treaded as min-height*/
-		min-height:100%; /* real browsers */
-	
-	}
-	.part {
-		display: block;
-		clear:none;
-		float:left;
-		width:28.5%;
-		border: 1px solid #000;
-		margin:2%;
-		height:80%; /* IE6: treaded as min-height*/
-		max-height:250px; /* real browsers */
-		min-height:120px;
-		
-	
-	}
-	#login {
-		float:right;
-		margin-right:15px;
-	}
-	.content {
-		position:relative;
-		height:80%; /* IE6: treaded as min-height*/
-		min-height:80%; /* real browsers */
-	}
-	.link {
-	position:absolute;
-	bottom:10px;
-	width:100%;
-	text-align:center;
-	padding:0px;
-	z-index:5;
-	}
-	.inner {
-		background-position:center;
-	}
-	.inner {
-	display:block;
-	width:100%;
-	height:100%;
-	max-height:250px;
-	min-height:120px;
-	position:relative;
-	
-}
-
-/* stat page */
-
-	#searchby div {
-	float:left;
-	margin-right: 0.8%;
-	margin-bottom:3%;
-	clear:none;
-
-	}
-	#info{
-	position:relative;
-	float:left;
-	width:350px;
-	padding:4%;
-	padding-top:1%;
-	}
-	.submitvote { /* vote nupp */
-	margin-top:10%;
-	float:right;
-	position:relative;
-	}
-	#info p{
-		width:100%;
-	}
-
-	.avalehele {
-	position:relative;
-	float:right;
-	clear:none;
-	}
-	.search { /* Otsi nupp */
-
-	margin-left:10px;
-	}
-	
-} 
 
 
 
