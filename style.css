@@ -123,7 +123,7 @@ height:100%;
 	background-color:#fb9e25;
 }.submitvote:active {
 	position:relative;
-	top:1px;
+	top:21px;
 }
 
 .avalehele {
@@ -157,13 +157,13 @@ height:100%;
 	background-color:#dfdfdf;
 }.avalehele:active {
 	position:relative;
-	top:1px;
+	top:11px;
 }
 
 
 #byname{
 	border-bottom:1px solid #125aa0;
-	padding-top:40px;
+	padding-top:20px;
 	padding-bottom:20px;
 }
 
