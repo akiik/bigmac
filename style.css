@@ -26,6 +26,7 @@ height:100%;
 	margin:0em auto;
 	height:100%; /* IE6: treaded as min-height*/
 	min-height:100%; /* real browsers */
+	
 
 }
 .part {
@@ -68,6 +69,10 @@ height:100%;
 	position:relative;
 	height:80%; /* IE6: treaded as min-height*/
 	min-height:80%; /* real browsers */
+	/*border:1px solid #114578;
+	background:#177de1;
+	border-radius:4px;
+	-moz-border-radius:4px;*/
 }
 
 
@@ -341,7 +346,9 @@ img.info{
 	margin-bottom:2%;
 }
 
-
+#stat_table {
+	position:relative;
+}
 
 .run {
 	margin-top: 70px;
@@ -403,4 +410,8 @@ table.gridtable td {
 	border-style: solid;
 	border-color: #666666;
 	background-color: #ffffff;
+}
+div#searchby p#feedback{
+	background:#FFF;
+	clear:both;
 }

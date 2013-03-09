@@ -10,6 +10,7 @@
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
 <script src="javascript.js"></script>
+<script src="request.js"></script>
 <link rel="stylesheet" href="/resources/demos/style.css" />
 
 
@@ -37,12 +38,31 @@
 						<a href="index.html" class="avalehele">Avalehele</a>
 					</div>
 				</div>
+				<div style="width:100%">
+					<form id="jsonsearch" action="" method="post">
+					
+					<select name="erakond">
+						<option>valimata</option>
+						<option>Keskerakond</option>
+						<option>Reformierakond</option>
+					</select>
+					<select name="asukoht">
+						<option>valimata</option>
+						<option>Tartu</option>
+						<option>Tallinn</option>
+					</select>
+						
+					
+					<input type="submit" value="Otsi" />
+					</form>
+				</div>
 				<p>Otsi erakonnast<p>
 				<div id="searchby">
 				<div id="row1">
-				<p id="feedback">
-				<span>Palun vali erakond:</span> <span id="select-result">valimata</span>.
-				</p>
+					<p id="feedback">
+						<span>Palun vali erakond:</span> <span id="select-result">valimata</span>.
+					</p>
+
 				<ol id="selectable">
 				<li class="ui-widget-content">Keskerakond</li>
 				<li class="ui-widget-content">Isamaa ja Res Publica liit</li>
