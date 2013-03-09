@@ -16,25 +16,28 @@ function getRequestObject() {
     return XMLHttpRequest();
 }
 
-function replaceCourseData(newdatael) {
-    var cd = window.document.getElementById("courseData");
+function replaceCandidatesData(newdatael) {
+    var cd = window.document.getElementById("candidates");
     while (cd.hasChildNodes()) {
         cd.removeChild(cd.firstChild);
     }
     cd.appendChild(newdatael);
 }
+
 function click_loadJSON(url) {
     var req = getRequestObject();
-    req.open("GET", "findCandidatesByParty.json", false); // synchronous request
-    alert("OK");
-    req.send("");alert("NOOT");
+    req.open("GET", url, false); // synchronous request
+    req.send("");
     //req.responseXML;
     if (!req.responseType || req.responseType == "json") {
         var ci = eval("(" + req.responseText + ")"); // Firefox requires ()
         if (ci) {
         	alert("OK");
             var cid = window.document.createElement("div");
-            cid.setAttribute("id", "courseinfo");
+            var p = ci.candidates;
+            cid.appendChild(p);
+            /*
+            cid.setAttribute("id", "candidate");
             var cih = window.document.createElement("h2");
             cih.appendChild(window.document.createTextNode(ci.kood + " " + ci.nimi));
             cid.appendChild(cih);
@@ -51,7 +54,8 @@ function click_loadJSON(url) {
             cip.appendChild(window.document.createElement("br"));
             cip.appendChild(window.document.createTextNode("Ruum: " + ci.loeng.ruum));
             cip.appendChild(window.document.createElement("br"));
-            cip.appendChild(window.document.createTextNode("Allikas: JSON"));
+            cip.appendChild(window.document.createTextNode("Allikas: JSON"));*/
+           
             replaceCourseData(cid);
         }
     }
