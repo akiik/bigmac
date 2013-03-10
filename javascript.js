@@ -70,16 +70,11 @@ $('#jsonsearch').submit(function() {
 });
 
 //menüü norefresh
-
-$(document).ready(function() {
-	
-	$('#content').load('index.html');
-	
-	$('.link a').click(function() {
-		var page = $(this).attr('href');
-		
-		$('#content').load(page);
-		return false;
-		
-	});
+$(function() {
+$(".content a").click(function(){
+     //$('#content').load('run.html');
+	 var page = $(this).attr('href');
+	 $('.content').load(page);
+	 return false;
+});
 });
