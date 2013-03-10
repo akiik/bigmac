@@ -69,4 +69,3 @@ $('#jsonsearch').submit(function() {
 });
 });
 
-
