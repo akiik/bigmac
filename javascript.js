@@ -74,7 +74,7 @@ $(function() {
 $(".content a").click(function(){
      //$('#content').load('run.html');
 	 var page = $(this).attr('href');
-	 $('.content').load(page);
+	 $('.content').load(page + ' '+ '#box');
 	 return false;
 });
 });
