@@ -85,6 +85,7 @@ $('#tabs li').click(function() {
 	loading();
   	//alert("OOK");
     });
+
  });
  
  
@@ -105,7 +106,7 @@ function loading()
 }).spin(document.getElementById("stat_table"));
 	
 	setTimeout(function() {
-        console.log("bouh");
+        //console.log("bouh");
         //document.getElementById("tabs").style.visibility="visible";
         spinner.stop();
         $( "#tabs div" ).each(function( index ) {
