@@ -11,6 +11,7 @@
 <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
 <script src="javascript.js"></script>
 <script src="request.js"></script>
+
 <link rel="stylesheet" href="/resources/demos/style.css" />
 
 
@@ -38,92 +39,73 @@
 						<a href="index.html" class="avalehele">Avalehele</a>
 					</div>
 				</div>
-				<div style="width:100%">
-					<form id="jsonsearch" action="" method="post">
-					
-					<select size="2" name="erakond">
-						<option>valimata</option>
-						<option>Keskerakond</option>
-						<option>Reformierakond</option>
-						<option>Keskerakond</option>
-						<option>Reformierakond</option>
-						<option>Keskerakond</option>
-						<option>Reformierakond</option>
-					</select>
-					<select name="asukoht">
-						<option>valimata</option>
-						<option>Tartu</option>
-						<option>Tallinn</option>
-					</select>
-						
-					
-					<input type="submit" value="Otsi" />
-					</form>
-					<div id="candidates">
-						
-					</div>
-				</div>
-				<p>Otsi erakonnast<p>
-				<div id="searchby">
-				<div id="row1">
-					<p id="feedback">
-						<span>Palun vali erakond:</span> <span id="select-result">valimata</span>.
-					</p>
 
-				<ol id="selectable">
-				<li class="ui-widget-content">Keskerakond</li>
-				<li class="ui-widget-content">Isamaa ja Res Publica liit</li>
-				<li class="ui-widget-content">Reformierakond</li>
-				<li class="ui-widget-content">Sotsiaaldemokraadid</li>
-				<li class="ui-widget-content">Lillearmastajad</li>
-				<li class="ui-widget-content">Hipid</li>
-				</ol>
-				</div>
-				
-				<div id="row2">
-				<p id="feedback">
-				<span>Valimispiirkond:</span> <span id="select-result">valimata</span>.
-				</p>
-				<ol id="selectable">
-				<li class="ui-widget-content">Harjumaa</li>
-				<li class="ui-widget-content">Tartumaa</li>
-				<li class="ui-widget-content">Võrumaa</li>
-				<li class="ui-widget-content">Hiiumaa</li>
-				<li class="ui-widget-content">Valgamaa</li>
-				<li class="ui-widget-content">Raplamaa</li>
-		
-				</ol>
-				</div>
-				
-				<div id="row2">
-				<p id="feedback">
-				<span>Kandidaadid:</span> <span id="select-result">valimata</span>.
-				</p>
-				<ol id="selectable">
-				<li class="ui-widget-content">Andruz Ansipov</li>
-				<li class="ui-widget-content">Edgar Savipäts</li>
-				<li class="ui-widget-content">Puka Nuka</li>
-				<li class="ui-widget-content">Nii Janaa</li>
-				<li class="ui-widget-content">Marko Kelk</li>
-				<li class="ui-widget-content">Marika Tuus</li>
-				</ol>
-				</div>
-				
-				<div id="info">
-					<img src="images/user-female-icon.png" class="info" alt="some_text">
-					<a href="#" class="submitvote">Hääleta</a>
-					<p></b>Nimi: <b>Andrus Ansip</b></p>
-					<p>Haridus: Kõrgharidus</p>
-					<p>Tegevusala: Ettevõtja</p>
-					<p>Vanus: 42</p>
-					<p>Info:</p>
-					<p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed egestas mi. Praesent sit amet leo dolor, non scelerisque nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ipsum diam. Curabitur vitae ipsum quis turpis lacinia lacinia.
-					<br>
-					Jahästipikasõnatestetseeelajasomaraamidespüsiksnohsaadaru?
-					</p>
-				</div>
+				<!--<p>Otsi erakonnast ja/või valimisringkonnast<p>-->
+				<div id="searchby">
+				<div id="searchform">
+						
+					<div class="searchform_part">	
+					<p class="searchform_label">Vali erakond</p>		
+					<select size="10" name="erakond" style="width:200px;" >
+						<option selected>valimata</option>
+						<option>Eesti Iseseisvuspartei</option>
+						<option>Keskerakond</option>
+						<option>Konservatiivne Rahvaerakond</option>
+						<option>Reformierakond</option>
+						<option>Eestimaa Rohelised</option>
+						<option>Isamaa ja Res Publica Liit</option>
+					</select>
+					</div>
+					<div class="searchform_part">
+					<p class="searchform_label">Vali piirkond</p>	
+					<select size="10" name="piirkond" style="width:120px;">
+						<option selected>valimata</option>
+						<option>Harjumaa</option>
+						<option>Hiiumaa</option>
+						<option>Põlvamaa</option>
+						<option>Tartumaa</option>
+						<option>Tallinn</option>
+						<option>Tartu</option>
+						<option>Järvamaa</option>
+						<option>Ida-Virumaa</option>
+						<option>Jõgevamaa</option>
+						<option>Põlvamaa</option>
+						<option>Pärnumaa</option>
+						<option>Saaremaa</option>
+					</select>
+					</div>
+					<div class="searchform_part" >	
+						<p class="searchform_label">Kandidaadid</p>
+					<select size="10" id="kandidaadid" name ="candidates">
+
+					</select>
+									
+	
+					</div>
 				
 				
+					<div class="searchform_part" id="chosen_candidate">
+						<p class="searchform_label">Sinu poolt valitud kandidaat on:</p>
+					<div id="info" >
+						Palun vali kandidaat.
+						
+						<!--<img src="images/user-female-icon.png" class="info" alt="some_text">
+						
+						<p>Nimi: <b>Andrus Ansip</b></p>
+						<p>Haridus: Kõrgharidus</p>
+						<p>Tegevusala: Ettevõtja</p>
+						<p>Vanus: 42</p>
+						<!--
+						<p>Info:</p>
+						<p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed egestas mi. Praesent sit amet leo dolor, non scelerisque nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ipsum diam. Curabitur vitae ipsum quis turpis lacinia lacinia.
+						<br>
+						Jahästipikasõnatestetseeelamidespüsiksnohsaadaru?
+						</p>
+						<a href="#" class="submitvote" >Hääleta</a>-->
+					</div>
+				
+					</div>
+					</div>
 				</div>
 			</div>
 

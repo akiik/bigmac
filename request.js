@@ -1,5 +1,7 @@
 
 
+
+
 function getRequestObject() {
     if (window.XMLHttpRequest)
         return new window.XMLHttpRequest();
@@ -16,15 +18,9 @@ function getRequestObject() {
     return XMLHttpRequest();
 }
 
-function replaceCandidatesData(newdatael) {
-    var cd = window.document.getElementById("candidates");
-    while (cd.hasChildNodes()) {
-        cd.removeChild(cd.firstChild);
-    }
-    cd.appendChild(newdatael);
-}
 
-function click_loadJSON(url) {
+
+function loadJSON(url,callback) {
     var req = getRequestObject();
     req.open("GET", url, false); // synchronous request
     req.send("");
@@ -32,35 +28,62 @@ function click_loadJSON(url) {
     if (!req.responseType || req.responseType == "json") {
         var ci = eval("(" + req.responseText + ")"); // Firefox requires ()
         if (ci) {
-        	alert("OK");
-            var cid = window.document.createElement("div");
-            var p = ci.candidates;
-            cid.appendChild(p);
-            /*
-            cid.setAttribute("id", "candidate");
-            var cih = window.document.createElement("h2");
-            cih.appendChild(window.document.createTextNode(ci.kood + " " + ci.nimi));
-            cid.appendChild(cih);
-            var cil = window.document.createElement("ol");
-            cid.appendChild(cil);
-            ci.teemad.forEach(function (it) {
-                var cit = window.document.createElement("li");
-                cil.appendChild(cit);
-                cit.appendChild(window.document.createTextNode(it));
-            });
-            var cip = window.document.createElement("p");
-            cid.appendChild(cip);
-            cip.appendChild(window.document.createTextNode("Loengu toimumine: " + ci.loeng.paev + " " + ci.loeng.kell));
-            cip.appendChild(window.document.createElement("br"));
-            cip.appendChild(window.document.createTextNode("Ruum: " + ci.loeng.ruum));
-            cip.appendChild(window.document.createElement("br"));
-            cip.appendChild(window.document.createTextNode("Allikas: JSON"));*/
-           
-            replaceCourseData(cid);
+			callback(ci);            
         }
     }
     else
         throw new Error("Response was not an JSON document! Response " + req.responseType + " " + req.responseText);
 
     return false; // for older browsers
+}
+
+
+function search_candidate_callback(ci){
+    var options = new Array();
+    var candidates = ci.candidates;
+    for (var i=0;i<candidates.length;i++){
+    	var option = window.document.createElement("option");
+    	option.setAttribute("value",candidates[i].person.id);
+    	option.text=candidates[i].person.name;
+    	options[i]=option;
+    	//cid.appendChild(window.document.createTextNode(candidates[i].person.name));
+    	//cid.appendChild(window.document.createElement("br"));
+    }
+    replaceCandidatesData(options);
+}
+
+function replaceCandidatesData(options) {
+    var cd = window.document.getElementById("kandidaadid");
+    while (cd.hasChildNodes()) {
+        cd.removeChild(cd.firstChild);
+    }
+    for (var i=0;i<options.length;i++){
+    	cd.appendChild(options[i]);
+    }  
+}
+
+function candidate_callback(ci) {
+	var cd = window.document.getElementById("info");
+	while (cd.hasChildNodes()) {
+        cd.removeChild(cd.firstChild);
+    }
+    var div = window.document.createElement("div");
+    div.style.width ="100%";
+    div.appendChild(window.document.createTextNode("Nimi: " + ci.person.name));
+    div.appendChild(window.document.createElement("br"));
+    div.appendChild(window.document.createTextNode("partei: " + ci.party.name));
+    div.appendChild(window.document.createElement("br"));
+    div.appendChild(window.document.createTextNode("piirkond: " + ci.region.name));
+    div.appendChild(window.document.createElement("br")); 
+    div.appendChild(window.document.createTextNode("isikukood: " + ci.person.id));
+    div.appendChild(window.document.createElement("br")); 
+    
+    var button = window.document.createElement("a");
+    button.setAttribute('class','submitvote');
+    button.setAttribute('href','#');
+    button.innerHTML ="Hääleta";
+
+	div.appendChild(button);
+    cd.appendChild(div);
+	
 }

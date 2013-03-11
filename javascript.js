@@ -1,3 +1,7 @@
+
+
+var ROOT_URI = "http://localhost/BIGMAC/";
+
 //login popup
 $(function() {
     $('#dialog').dialog({
@@ -7,18 +11,9 @@ $(function() {
         $('#dialog').dialog('open');
     });
 });
-//vali erakond
-$(function() {
-$( "#selectable" ).selectable({
-stop: function() {
-var result = $( "#select-result" ).empty();
-$( ".ui-selected", this ).each(function() {
-var index = $( "#selectable li" ).index( this );
-result.append( " #" + ( index + 1 ) );
-});
-}
-});
-});
+
+
+
 
 //nime autocomplete
 
@@ -41,32 +36,59 @@ result.append( " #" + ( index + 1 ) );
 	$( "#tabs" ).tabs();
 });
 
-$(function() {
-$('#jsonsearch').submit(function() {
-    // get all the inputs into an array.
-    var $inputs = $("#jsonsearch select");
+
+ $(function() {
+$('#searchform select').change(function() {
+	
+	
+	var $selects = $("#searchform select");
     // not sure if you wanted this, but I thought I'd add it.
     // get an associative array of just the values.
     var values = {};
-    $inputs.each(function() {
+    $selects.each(function() {
         values[this.name] = $(this).val();
     });
 	
-	if (values["erakond"]!= "valimata" && values["asukoht"]!= "valimata") {
-			alert (values["erakond"]+values["asukoht"]);
+	if ((values["erakond"]!= "valimata") && (values["piirkond"] != "valimata")) {
+			loadJSON(ROOT_URI+"/json/findCandidatesByPartyAndRegion.json",search_candidate_callback);
 		}
-	else if (values["erakond"]!= "valimata") {
-			alert (values["erakond"]);
-			click_loadJSON("json/findCandidatesByParty.json");
+	else if (values["erakond"] != "valimata") {
+			loadJSON(ROOT_URI+"/json/findCandidatesByParty.json",search_candidate_callback);
 		}
-	else if (values["asukoht"]!= "valimata") {
-			alert (values["asukoht"]);
+	else if (values["piirkond"] != "valimata") {
+			loadJSON(ROOT_URI+"/json/findCandidatesByRegion.json",search_candidate_callback);
 		}
 	else {
-		alert ("palun vali erakond ja/või asukoht");
+		replaceCandidatesData("");
 	}
-			
-});
-});
+	if (values["candidates"]) {
+		loadJSON(ROOT_URI+"/json/candidate.json",candidate_callback);
+		
+	}
+	return false;  		
+	
+	
+	
+	/*
+	var select_name = $(this).attr("name");
+	var selected_value=$(this).find(':selected').val();
 
+	if (select_name == "erakond" && selected_value != "valimata" || select_name == "piirkond" && selected_value == "valimata"){		
+		click_loadJSON(ROOT_URI+"/json/findCandidatesByParty.json");
+	}
+	else if (select_name == "piirkond" && selected_value != "valimata" || select_name == "erakond" && selected_value == "valimata"){
+		click_loadJSON(ROOT_URI+"/json/findCandidatesByRegion.json");
+	}
+	*/
+	//alert($(this).find(':selected').val());
+	/*
+        if ($(this).find(':selected').val() === '5') {
+            $('div#custom_proptions').slideDown('slow');
+        } else {
+            $('div#custom_proptions').slideUp('slow');
+        }
+        */
+    });
+ });
+ 
 
