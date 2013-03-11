@@ -1,6 +1,6 @@
 
 
-var ROOT_URI = "http://localhost/BIGMAC/";
+var ROOT_URI = "http://ec2-23-21-6-189.compute-1.amazonaws.com/bigmac/";
 
 //login popup
 $(function() {
@@ -74,6 +74,9 @@ $(document).ready(function()
 
  $(function() {
 $('#tabs li').click(function() {
+  $( "#tabs div" ).each(function( index ) {
+     this.style.visibility="hidden";  
+    });
 	loading();
   	//alert("OOK");
     });
@@ -84,7 +87,7 @@ $('#tabs li').click(function() {
 
 function loading()
 {
-	document.getElementById("tabs").style.visibility="hidden";
+	//document.getElementById("tabs").style.visibility="hidden";
 	var spinner = new Spinner({
 	lines: 12, // The number of lines to draw
 	length: 7, // The length of each line
@@ -98,8 +101,11 @@ function loading()
 	
 	setTimeout(function() {
         console.log("bouh");
-        document.getElementById("tabs").style.visibility="visible";
-        spinner.stop(); // Stop the spinner
+        //document.getElementById("tabs").style.visibility="visible";
+        spinner.stop();
+        $( "#tabs div" ).each(function( index ) {
+     this.style.visibility="visible";  
+    }); // Stop the spinner
     }, 1000);
 
 }
