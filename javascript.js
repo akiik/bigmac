@@ -69,12 +69,8 @@ $('#jsonsearch').submit(function() {
 });
 });
 
-//menüü norefresh
-$(function() {
-$(".content a").click(function(){
-     //$('#content').load('run.html');
-	 var page = $(this).attr('href');
-	 $('.content').load(page + ' '+ '#box');
-	 return false;
-});
-});
+$(document).ready(function() 
+    { 
+        $("#myTable").tablesorter(); 
+    } 
+); 

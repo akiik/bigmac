@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="/resources/demos/style.css" />
 <!-- Include Print CSS -->
 <link rel="stylesheet" href="print.css" type="text/css" media="print" />
+<script type="text/javascript" src="jquery.tablesorter.js"></script>
 
 </head>
   <body>
@@ -46,21 +47,35 @@
 					<li><a href="#tabs-4" class="no-print">Kandidaatide lõikes lõikes</a></li>
 					</ul>
 					<div id="tabs-1">
+						<table id="myTable" class="tablesorter"> 
+						<thead> 
+						<tr> 
+							<th>Erkond</th> 
+							<th>Reformierakond</th> 
+							<th>IRL</th> 
+							<th>Keskerakond</th> 
+							<th>SDE</th> 
+						</tr> 
+						</thead> 
+						<tbody> 
+						<tr> 
+							<td>Häälte arv</td> 
+							<td>6575</td> 
+							<td>5675</td> 
+							<td>567657</td> 
+							<td>567</td> 
+						</tr> 
+						<tr> 
+							<td>Häälte %</td> 
+							<td>23%</td> 
+							<td>23%</td> 
+							<td>23%</td> 
+							<td>23%</td> 
+						</tr> 
 
-						
-						<table class="gridtable">
-						<tr>
-							<th>Erakond</th><th>Reformierakond</th><th>IRL</th><th>Keskerakond</th><th>SDE</th><th>EKD</th><th>Vene Erakond</th>
-						</tr>
-						<tr>
-							<td>Häälte arv</td><td>2455</td><td>2455</td><td>2455</td><td>2455</td><td>2455</td><td>2455</td>
-						</tr>
-						<tr>
-							<td>Häälte protsent</td><td>17%</td><td>17%</td><td>17%</td><td>17%</td><td>17%</td><td>17%</td>
-						</tr>
+						</tbody> 
 						</table>
-
-						
+					
 					</div>
 					<div id="tabs-2">
 						<img src="images/map.png">
