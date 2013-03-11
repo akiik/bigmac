@@ -61,6 +61,11 @@ $('#searchform select').change(function() {
 	else {
 		replaceCandidatesData("");
 	}
+	if (values["candidates"]) {
+		loadJSON(ROOT_URI+"/json/candidate.json",candidate_callback);
+		
+	}
+	return false; 
 			
 });
 });
