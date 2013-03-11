@@ -72,5 +72,6 @@ $('#jsonsearch').submit(function() {
 $(document).ready(function() 
     { 
         $("#myTable").tablesorter(); 
+		$("#myTable2").tablesorter(); 
     } 
 ); 
