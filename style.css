@@ -116,7 +116,9 @@ height:100%;
 	width:100%;
 }
 
-
+.footer {
+	height:30px;
+}
 .submitvote { /* vote nupp */
 	margin-top:2%;
 	float:right;
