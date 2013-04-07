@@ -5,12 +5,19 @@ public class Candidate {
 	  private Person person;
 	  private Party party;
 	  private Region region;
+	  private int votes;
 	public Candidate(int id, Person person, Party party, Region region) {
 		super();
 		this.id = id;
 		this.person = person;
 		this.party = party;
 		this.region = region;
+	}
+	public int getVotes() {
+		return votes;
+	}
+	public void setVotes(int votes) {
+		this.votes = votes;
 	}
 	public int getId() {
 		return id;
@@ -36,6 +43,7 @@ public class Candidate {
 	public void setRegion(Region region) {
 		this.region = region;
 	}
+
 	
 	
 

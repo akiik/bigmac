@@ -52,7 +52,8 @@ public class CandidateByPartyAndRegionServlet extends HttpServlet {
   		e.printStackTrace();
   	  }
       Candidates candidates = new Candidates( new ArrayList<Candidate>() );
-      
+      response.setContentType("application/json");
+      response.setCharacterEncoding("UTF-8");
       PrintWriter out = response.getWriter();
       
 	      DB db = new DB();

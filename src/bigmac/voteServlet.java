@@ -55,7 +55,7 @@ public class voteServlet extends HttpServlet {
 		         System.out.println(SQLString);
 		         Statement stat = db.getConnection().createStatement();
 		         stat.executeUpdate(SQLString);
-		         SQLString = " UPDATE person SET vote = '"+id+"' WHERE id='4';";
+		         SQLString = " UPDATE person SET vote = '"+id+"' WHERE id='16';";
 		         stat.executeUpdate(SQLString);
 		        db.disconnect();
 		        String success= "Olete edukalt oma hääle andnud, Teie hääl loeb!";

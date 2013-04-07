@@ -10,7 +10,7 @@ function getRequestObject() {
             try { return new ActiveXObject("Msxml2.XMLHTTP.6.0"); } catch (e) { }
             try { return new ActiveXObject("Msxml2.XMLHTTP.3.0"); } catch (e) { }
             try { return new ActiveXObject("Microsoft.XMLHTTP"); } catch (e) { }
-            throw new Error("This†browser†does†not†support†XMLHttpRequest.");
+            throw new Error("This browser does not support XMLHttpRequest.");
         };
     }
     else
@@ -25,6 +25,7 @@ function loadJSON(url,callback) {
     
    
     req.open("GET", url, false); // synchronous request
+    req.setRequestHeader('Content-Type', 'Charset=UTF-8');
     req.send("");
    
     //req.responseXML;
@@ -78,16 +79,15 @@ function candidate_callback(ci) {
     div.appendChild(window.document.createElement("br"));
     div.appendChild(window.document.createTextNode("piirkond: " + ci.region.name));
     div.appendChild(window.document.createElement("br")); 
-    
     var input = window.document.createElement("input");
     input.setAttribute('type','hidden');
-    input.setAttribute('value',ci.person.id);
+    input.setAttribute('value',ci.id);
     input.setAttribute('name','id');
     div.appendChild(input);
     var submit = window.document.createElement("input");
     submit.setAttribute('class','submitvote');
     submit.setAttribute('type','submit');
-    submit.setAttribute('value',"H‰‰leta");
+    submit.setAttribute('value',"H√§√§leta");
     div.appendChild(submit);  
     cd.appendChild(div);
 	

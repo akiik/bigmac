@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <jsp:include page="/template/header.html"></jsp:include>
@@ -17,7 +17,7 @@
 				<div id="row1">
 					<h3>Isikuandmed:</h3>
 					<p>Nimi: Eesnimi Perekonnanimi</p>
-					<p>Sünniaeg: PP-KK-AA</p>
+					<p>SÃ¼nniaeg: PP-KK-AA</p>
 					<p>Isikukood: 1234567890</p>
 				</div>				
 				<div id="row2">
@@ -45,9 +45,9 @@
 					<select name="haridus">
 					<option value="null">Vali haridustase:</option>
 					<option value="alg">algharidus</option>
-					<option value="pohi">põhiharidus</option>
+					<option value="pohi">pÃµhiharidus</option>
 					<option value="kesk">keskharidus</option>
-					<option value="korg">kõrgharidus</option>
+					<option value="korg">kÃµrgharidus</option>
 					</select>
 					<br>
 					<label class="hid_err" id="hid_3">Palun vali tegevusala!</label>
@@ -56,7 +56,7 @@
 				</div>
 				
 				<div id="row2">
-					<h3>Sõnum valijale:</h3>
+					<h3>SÃµnum valijale:</h3>
 					<p>Kirjuta, miks peaks inimene just sind valima:</p>
 					<textarea name="run_message" rows="4" cols="30"></textarea>
 				</div>

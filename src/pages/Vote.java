@@ -37,6 +37,9 @@ public class Vote extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		response.setContentType("text/html");
+        response.setCharacterEncoding("UTF-8");
+		
 		java.util.List<String> partys = new ArrayList<String>();
 		java.util.List<String> regions = new ArrayList<String>();
 		

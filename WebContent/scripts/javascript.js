@@ -21,14 +21,7 @@ $(function() {
 //nime autocomplete
 
  $(function() {
-	var availableTags = [
-	"Jaan Põµld",
-	"Jaanus Murakas",
-	"Janar Kokk",
-	"Priit Punane",
-	"Peeter Karvane"
 
-	];
 	$( "#tags" ).autocomplete({
 		source: function(request, response) {
 		    $.getJSON("./autocomplete", { foo: request.term }, response);
@@ -44,7 +37,7 @@ $(function() {
 
  $(function() {
 $('#searchform select').change(function() {
-	
+
 	
 	var $selects = $("#searchform select");
     // not sure if you wanted this, but I thought I'd add it.
@@ -82,6 +75,7 @@ $(document).ready(function()
     { 
         $("#myTable").tablesorter(); 
 		$("#myTable2").tablesorter(); 
+		$("#myTable1").tablesorter(); 
     } 
 ); 
 
@@ -125,7 +119,13 @@ function loading()
 }
 
 
-
+$(function() {
+	$('#searchbyname').click(function() {
+		var value = $(".searchbyname").val();
+		loadJSON("./candidate/name/"+value,candidate_callback);
+		return false;
+	});
+});
 
 
 

@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-
+ 
 <jsp:include page="/template/header.html"></jsp:include>
 
 <div class="content">
@@ -11,8 +11,8 @@
 			<div class="nonrelevant">
 				
 				<label for="tags">Otsi nime: </label>
-				<input id="tags" />
-				<a href="#" class="search">Otsi</a>
+				<input id="tags" class="searchbyname" />
+				<a href="" id="searchbyname" class="search">Otsi</a>
 				<a href="./" class="avalehele">Avalehele</a>
 			</div>
 		</div>

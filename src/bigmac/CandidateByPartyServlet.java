@@ -44,7 +44,8 @@ public class CandidateByPartyServlet extends HttpServlet {
   	  String[] pathInfo = request.getPathInfo().split("/");
       String partyName = pathInfo[1]; // {Partei nimi}
       Candidates candidates = new Candidates( new ArrayList<Candidate>() );
-      
+      response.setContentType("application/json");
+      response.setCharacterEncoding("UTF-8");
       PrintWriter out = response.getWriter();
       
 	      DB db = new DB();
