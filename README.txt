@@ -16,7 +16,6 @@ STEP 2
 ##########
 
 Ava lokaalse repositooriumi kaust. 
-Mine intall kataloogi.
 Käivita "installer.bat" fail.
 NB!
 Installiskripti staatilisuse tõttu on väga oluline, 
