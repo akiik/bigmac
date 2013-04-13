@@ -16,7 +16,7 @@ STEP 2
 ##########
 
 Ava lokaalse repositooriumi kaust. 
-Käivita "installer.bat" fail.
+Käivita "installer.bat" fail administraatori õigustes (parem klikk-> run as administrator).
 NB!
 Installiskripti staatilisuse tõttu on väga oluline, 
 et Tomcat Server installeeritakse vaikekataloogi "C:\Program Files\Apache Software Foundation\Tomcat 7.0\"",
