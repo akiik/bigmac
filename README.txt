@@ -2,7 +2,7 @@
 INSTALL
 ##########
 Järgnev installeerimisjuhend on mõeldud OS W7'le, millel on eelnevalt installeeritud
-Java Standard Edition Runtime Environment (JRE) versioon 6 või hilisem ning MinGW.
+Java Standard Edition Runtime Environment (JRE) versioon 6 või hilisem ning Git.
 
 ##########
 STEP 1
