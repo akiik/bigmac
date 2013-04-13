@@ -39,11 +39,7 @@ vali EXECUTE
 vali Finish
 
 
-
-
-
-
 ##########
 STEP 3
 ##########
-Mine aadressile http://localhost:8888/
+Käivita Tomcat server ja  mine aadressile http://localhost:8888/
