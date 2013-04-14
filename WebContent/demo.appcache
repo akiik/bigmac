@@ -1,0 +1,21 @@
+CACHE MANIFEST
+index.jsp
+message.jsp
+run.jsp
+stat.jsp
+vote.jsp
+footer.html
+header.html
+./css/style.css
+./css/mobile.css
+./css/print.css
+http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css
+http://code.jquery.com/jquery-1.9.1.js
+http://code.jquery.com/ui/1.10.1/jquery-ui.js
+./scripts/javascript.js
+./scripts/request.js
+./scripts/spin.js
+./scripts/jquery.tablesorter.js
+./scripts/formvalidate.js
+
+/resources/demos/style.css
