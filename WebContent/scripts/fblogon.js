@@ -1,4 +1,4 @@
-/*// Facebook logon functions here.
+// Facebook logon functions here.
 
 // Additional JS functions here
 window.fbAsyncInit = function() {
@@ -11,16 +11,20 @@ window.fbAsyncInit = function() {
 	});
 	
 	// Additional init code here
+	// Additional init code here
 	FB.getLoginStatus(function(response) {
-		if (response.status === 'connected') {
-			// connected
-		} else if (response.status === 'not_authorized') {
-			// not_authorized
-			login();
-		} else {
-			// not_logged_in
-			login();
-		}
+	    if (response.status === 'connected') {
+	        // User logged into FB and authorized
+	        testAPI();
+	        document.getElementById('fb-logout').style.display = 'block';
+	    } else if (response.status === 'not_authorized') {
+	        // User logged into FB but not authorized
+	        login();
+	    } else {
+	        // User not logged into FB
+	        login();
+	        document.getElementById('fb-logout').style.display = 'block';
+	    }
 	});
 };
 
@@ -35,6 +39,12 @@ function login() {
 	});
 }
 
+function logout() {
+    FB.logout(function(response) {
+        console.log('User is now logged out');
+    });
+}
+
 // Load the SDK Asynchronously
 (function(d) {
 	var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
@@ -46,4 +56,4 @@ function login() {
 	js.async = true;
 	js.src = "//connect.facebook.net/et_EE/all.js";
 	ref.parentNode.insertBefore(js, ref);
-}(document));*/
+}(document));

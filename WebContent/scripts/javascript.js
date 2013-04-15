@@ -2,14 +2,14 @@
 
 var ROOT_URI = "http://ec2-23-21-6-189.compute-1.amazonaws.com/bigmac/";
 
-/*
+
 //facebook login function
 $(function() {
 	$('#login').click(function() {
 		FB.login();
 	})
 })
-*/
+
 
 //nime autocomplete
  $(function() {
