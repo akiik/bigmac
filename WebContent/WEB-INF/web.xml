@@ -26,4 +26,12 @@
     <servlet-name>bigmac</servlet-name>
     <url-pattern>/bigmac</url-pattern>
   </servlet-mapping>
+  <filter>
+    <filter-name>fbauth</filter-name>
+    <filter-class>bigmac.FBOAuth</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>fbauth</filter-name>
+    <url-pattern>/fbauth</url-pattern>
+  </filter-mapping>
 </web-app>

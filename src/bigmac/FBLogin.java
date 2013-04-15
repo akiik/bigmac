@@ -32,7 +32,6 @@ public class FBLogin extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		if (request.getParameter("action").equals("login")) {
-			//response.setContentType("text/html");
 	        response.setCharacterEncoding("UTF-8");
 	        String loginURL = Facebook.getLoginRedirectURL();
 	        System.out.println(loginURL);
