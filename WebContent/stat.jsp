@@ -55,7 +55,7 @@
 					
 					</div>
 					<div id="tabs-2">
-						<div id="googleMap" style="width:900px;height:400px;"></div>
+						<div id="map" style="height: 600px; width: 800px;">
 					</div>
 					<div id="tabs-3">
 						<table id="myTable1" class="tablesorter"> 
