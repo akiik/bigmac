@@ -19,7 +19,7 @@
 					<div id="tabs">
 					<ul>
 					<li><a href="#tabs-1" class="no-print">Kogu riigis</a></li>
-					<li><a href="#tabs-2" class="no-print">Piirkondade lõikes</a></li>
+					<li><a href="#tabs-2" class="no-print" onclick=initialize()>Piirkondade lõikes</a></li>
 					<li><a href="#tabs-3" class="no-print">Parteide lõikes</a></li>
 					<li><a href="#tabs-4" class="no-print">Kandidaatide lõikes</a></li>
 					</ul>
@@ -55,7 +55,7 @@
 					
 					</div>
 					<div id="tabs-2">
-						<img src="css/images/map.png">
+						<div id="map" style="height: 600px; width: 900px;">
 					</div>
 					<div id="tabs-3">
 						<table id="myTable1" class="tablesorter"> 
