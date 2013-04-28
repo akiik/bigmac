@@ -18,7 +18,7 @@ public class PostCandidateServlet extends HttpServlet {
          // Prepare the values
          String SQLString;
     	  
-    	 int person =  137;
+    	 int person =  16;
          String party = request.getParameter("erakonnad");
          String region = request.getParameter("piirkond");
          if (party !=null && region != null){
