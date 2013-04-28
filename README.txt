@@ -17,7 +17,8 @@ Lae alla ja seadista ANT:
 http://mirror.cc.columbia.edu/pub/software/apache//ant/binaries/apache-ant-1.9.0-bin.zip
 Paki lahti.
 Seadista keskkonnamuutujad:
-JAVA_HOME=kaust/kus/asub/java/JDK ja ANT_HOME=kaust/kus/asub/ANT/bin
+JAVA_HOME=kaust/kus/asub/java/JDK ja ANT_HOME=kaust/kus/asub/ANT ning
+lisa PATH muutujale ;kaust/kus/asub/ANT/bin
 
 Testi käsureal: ant
 kui not found build.xml siis OK
