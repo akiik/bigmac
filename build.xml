@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<project default="warTarget" basedir=".">
+	<property name="tomcat" value="D:\Programmid\apache-tomcat-7.0.39" />
+	<property name="tomcat.deployment" value="${tomcat}/webapps"/>
+	<property name="tomcat.bin" value="${tomcat}/bin" />
+	<property name="base" value="."/>
+	<property name="source" value="${base}/src"/>
+	<target name="warTarget">
+		<war warfile="bigmac.war" needxmlfile="false">
+			<fileset dir="WebContent" />
+			<lib dir="WebContent/WEB-INF/lib"/>
+			<classes dir="build/classes"/>
+		</war>
+		<antcall target="deployTarget" />
+	</target>
+	<target name="deployTarget">
+		<copy file="${base}/bigmac.war" todir="${tomcat.deployment}"/>
+		<antcall target="startTomcat"/>
+	</target>
+	<target name="startTomcat">
+		<exec executable="${tomcat.bin}/startup.bat"/>
+	</target>
+	<target name="stopTomcat">
+		<exec executable="${tomcat.bin}/shutdown.bat"/>
+	</target>
+	
+	<path id="class.path">
+	  <pathelement location="WebContent/WEB-INF/lib/junit-4.11.jar" />
+      <pathelement location="WebContent/WEB-INF/lib/testng-6.2.jar" />
+      <pathelement location="WebContent/WEB-INF/lib/selenium-java-2.32.0.jar" />
+      <pathelement location="WebContent/WEB-INF/lib/selenium-server-standalone-2.32.0.jar" />
+      <pathelement location="WebContent/WEB-INF/lib/mysql-connector-java-5.1.24-bin.jar" />
+      <pathelement location="WebContent/WEB-INF/lib/jstl-1.2.jar" />
+      <pathelement location="build/classes" />
+  </path>
+   
+    <taskdef name="testng" classname="org.testng.TestNGAntTask">
+      <classpath>
+        <pathelement location="${base}/WebContent/WEB-INF/lib/testng-6.8.jar"/>
+      </classpath>
+    </taskdef>
+    
+     <target name="runTest">   
+      <mkdir dir="testng_output"/><!-- Create the output directory. -->
+   
+    <testng mode="junit" outputdir="testng_output" classpathref="class.path"> 
+          <classfileset dir="build/classes/tests" includes="**/*.class" />
+     </testng>
+    </target>
+
+
+
+</project>
+
