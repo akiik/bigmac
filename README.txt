@@ -73,6 +73,9 @@ Mine aadressile http://localhost:8080/bigmac
 ##########
 STEP 7 
 ##########
+Testide kävitamiseks:
+mine repos webcontent/WEB-INF/lib kausta ja käivita seleniumi server
+java -jar selenium-server-standalone-2.32.0.jar
 
 Testimiseks jooksuta käsk "ant runTest".
 
