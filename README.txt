@@ -34,6 +34,7 @@ Neljandal real asenda
 	<property name="tomcat" value="D:\Programmid\apache-tomcat-7.0.39" />
 value väärtus lahti pakitud tomcati kasuta asukohaga.
 Sulge build.xml
+Seadista kesskonnamuutuja CATALINA_HOME = tomcati/kaust
 
 ##########
 STEP 4
