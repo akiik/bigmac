@@ -337,6 +337,10 @@ font-family: Arial, sans-serif;
 	margin-left:5px;
 	float:left;
 }
+.row2{
+	margin-left:5px;
+	float:left;
+}
 
 #selectable .ui-selecting { background: #FECA40; }
 #selectable .ui-selected { background: #F39814; color: white; }

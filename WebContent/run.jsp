@@ -20,7 +20,7 @@
 					<p>Sünniaeg: PP-KK-AA</p>
 					<p>Isikukood: 1234567890</p>
 				</div>				
-				<div id="row2">
+				<div class="row2">
 					<h3>Kandideerimise andmed:</h3>
 					
 					<label class="hid_err" id="hid_0">Palun vali partei!</label>
@@ -51,7 +51,7 @@
 					</select>
 					<br>
 					<label class="hid_err" id="hid_3">Palun vali tegevusala!</label>
-					<input type="text" style="color:#ccc;" value="Sisesta tegevusala" onfocus="this.value = this.value=='Sisesta tegevusala' ? '' : this.value; this.style.color='#000';" onfocusout="this.value = this.value == '' ? this.value = 'Sisesta tegevusala' : this.value; this.value=='Sisesta tegevusala' ? this.style.color='#ccc' : this.style.color='#000'"/>
+					<input type="text" class="c1" value="Sisesta tegevusala" onfocus="this.value = this.value=='Sisesta tegevusala' ? '' : this.value; this.style.color='#000';">
 					
 				</div>
 				

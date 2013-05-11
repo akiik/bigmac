@@ -91,7 +91,7 @@
 						<tbody> 
 						<c:forEach var="candidate" items="${candidates}">
 							<tr>
-								<td><div>${candidate.id}</div></div></td>
+								<td><div>${candidate.id}</div></td>
 								<td><div>${candidate.person.name}</div></td>
 								<td><div>${candidate.party.name}</div></td>
 								<td><div>${candidate.region.name}</div></td>
@@ -110,7 +110,7 @@
 				
 			</div>
 
-
+</div>
 
 
 
