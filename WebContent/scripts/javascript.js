@@ -3,27 +3,20 @@
 var ROOT_URI = "http://ec2-23-21-6-189.compute-1.amazonaws.com/bigmac/";
 
 
-//facebook login function
-$(function() {
-	$('#login').click(function() {
-		FB.login();
-	})
-})
-
-
 //nime autocomplete
- $(function() {
+$(function() {
 
-	$( "#tags" ).autocomplete({
-		source: function(request, response) {
-		    $.getJSON("./autocomplete", { foo: request.term }, response);
+    $("#tags").autocomplete({
+    	
+        source: function(request, response) {
+            $.getJSON("./autocomplete", { foo: request.term }, response);
 		  }
 	});
 });
 
 //statistika tabid
  $(function() {
-	$( "#tabs" ).tabs();
+    $("#tabs").tabs();
 });
 
 
